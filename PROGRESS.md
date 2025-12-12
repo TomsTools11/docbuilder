@@ -13,11 +13,16 @@
 |------|-------------|--------|
 | `index.html` | Main landing page with semantic HTML structure | Complete |
 | `styles.css` | All styling following Brief Builder style guide | Complete |
+| `docbuilder-logo.svg` | Official DocBuilder logo (added to repo) | Complete |
 
 ### Features Implemented
 
-- **Header** - Sticky navigation with DocBuilder logo and brand name
-- **Hero Section** - Gradient background with headline, subtitle, and description
+- **Header** - Sticky navigation with:
+  - DocBuilder logo (SVG image)
+  - Navigation links: "Home" and "My Projects" (both link to tom-panos.com)
+- **Hero Section** - Gradient background with:
+  - DocBuilder logo (80px height, centered)
+  - Subtitle and description text
 - **Tool Cards** - Two cards linking to deployed applications:
   - Creative Brief Builder → https://brief-builder.netlify.app/
   - Style Guide Generator → https://styleguidegenerator-production.up.railway.app/
@@ -60,6 +65,32 @@ Based on `brief-builder.netlify.app-style-guide.pdf`:
 - Cards stack vertically on mobile (<768px)
 - Cards display side-by-side on tablet/desktop
 - Typography scales appropriately across breakpoints
+
+---
+
+## Recent Updates (December 12, 2024)
+
+### Logo Integration
+
+- Replaced placeholder SVG icon with official DocBuilder logo in header navigation
+- Updated hero section title to display DocBuilder logo instead of text
+- Logo displays at 32px height in header, 80px height in hero section
+
+### Navigation Enhancement
+
+- Added navigation menu to header with two links:
+  - **Home** → <https://tom-panos.com>
+  - **My Projects** → <https://tom-panos.com/toms-projects>
+- Navigation styled with:
+  - Right-aligned positioning
+  - Hover effect with brand color (#2383E2)
+  - Proper spacing and accessibility features
+
+### CSS Updates
+
+- Added `.header .container` flexbox layout with `justify-content: space-between`
+- Added `.nav` and `.nav-link` styles for navigation menu
+- Maintained consistent spacing using existing design tokens
 
 ---
 

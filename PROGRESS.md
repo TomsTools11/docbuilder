@@ -19,10 +19,10 @@
 ### Features Implemented
 
 - **Header** - Sticky navigation with:
-  - DocBuilder logo (SVG image)
+  - Site logo (`tt9.svg`, 32px height)
   - Navigation links: "Home" and "My Projects" (both link to tom-panos.com)
 - **Hero Section** - Gradient background with:
-  - DocBuilder logo (80px height, centered)
+  - Site logo (`tt9.svg`, 80px height, centered)
   - Subtitle and description text
 - **Tool Cards** - Two cards linking to deployed applications:
   - Creative Brief Builder → https://brief-builder.netlify.app/
@@ -77,11 +77,11 @@ Based on `brief-builder.netlify.app-style-guide.pdf`:
 - Header logo: Updated from `docbuilder-logo.svg` to `tt9.svg` (32px height)
 - Hero section logo: Updated from `docbuilder-logo.svg` to `tt9.svg` (80px height)
 
-### Previous Logo Integration
+### Previous Updates (Historical)
 
-- Replaced placeholder SVG icon with official DocBuilder logo in header navigation
-- Updated hero section title to display DocBuilder logo instead of text
-- Logo displays at 32px height in header, 80px height in hero section
+- Initially replaced placeholder SVG icon with DocBuilder logo in header navigation
+- Updated hero section title to display logo instead of text
+- Logo sizing: 32px height in header, 80px height in hero section
 
 ### Navigation Enhancement
 

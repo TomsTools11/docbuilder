@@ -13,7 +13,8 @@
 |------|-------------|--------|
 | `index.html` | Main landing page with semantic HTML structure | Complete |
 | `styles.css` | All styling following Brief Builder style guide | Complete |
-| `docbuilder-logo.svg` | Official DocBuilder logo (added to repo) | Complete |
+| `tt9.svg` | Current site logo | Active |
+| `docbuilder-logo.svg` | Previous DocBuilder logo | Archived |
 
 ### Features Implemented
 
@@ -70,7 +71,13 @@ Based on `brief-builder.netlify.app-style-guide.pdf`:
 
 ## Recent Updates (December 12, 2024)
 
-### Logo Integration
+### Logo Replacement - tt9.svg
+
+- Replaced both site logos with new `tt9.svg` branding
+- Header logo: Updated from `docbuilder-logo.svg` to `tt9.svg` (32px height)
+- Hero section logo: Updated from `docbuilder-logo.svg` to `tt9.svg` (80px height)
+
+### Previous Logo Integration
 
 - Replaced placeholder SVG icon with official DocBuilder logo in header navigation
 - Updated hero section title to display DocBuilder logo instead of text
@@ -135,6 +142,8 @@ If you want a custom domain (e.g., `docbuilder.tom-panos.com`):
 docbuilder-landing-page/
 ├── index.html                              # Main landing page
 ├── styles.css                              # All styles
+├── tt9.svg                                 # Current site logo
+├── docbuilder-logo.svg                     # Previous logo (archived)
 ├── high-level-landing-page-plan.md         # Original requirements
 ├── brief-builder.netlify.app-style-guide.pdf  # Design reference
 ├── example-ui.png                          # Visual reference

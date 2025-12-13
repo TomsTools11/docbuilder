@@ -1,41 +1,74 @@
 # DocBuilder Landing Page - Progress Update
 
-**Last Updated:** December 12, 2024
-**Status:** Ready for Deployment
+**Last Updated:** December 13, 2024
+**Status:** Deployed and Live
 
 ---
 
 ## Completed Work
 
-### Files Created
+### Files Created/Modified
 
 | File | Description | Status |
 |------|-------------|--------|
-| `index.html` | Main landing page with semantic HTML structure | Complete |
+| `index.html` | Main landing page with full redesign | Complete |
 | `styles.css` | All styling following Brief Builder style guide | Complete |
-| `tt9.svg` | Current site logo | Active |
-| `docbuilder-logo.svg` | Previous DocBuilder logo | Archived |
+| `docbuilder-logo.svg` | DocBuilder logo (used in header and footer) | Active |
+| `brief-builder-image.svg` | Tool preview image for Creative Brief Builder | Active |
+| `style-guide-generator-image.svg` | Tool preview image for Style Guide Generator | Active |
 
-### Features Implemented
+### Landing Page Structure
 
-- **Header** - Sticky navigation with:
-  - DocBuilder logo (SVG image)
-  - Navigation links: "Home" and "My Projects" (both link to tom-panos.com)
-- **Hero Section** - Gradient background with:
-  - DocBuilder logo (80px height, centered)
-  - Subtitle and description text
-- **Tool Cards** - Two cards linking to deployed applications:
-  - Creative Brief Builder → https://brief-builder.netlify.app/
-  - Style Guide Generator → https://styleguidegenerator-production.up.railway.app/
-- **GitHub Links** - Each card includes a link to its GitHub repository
-- **Footer** - Attribution text: "Made with ❤️ by Tom in Milwaukee, WI" (Tom links to tom-panos.com)
+The landing page now matches the style of the Creative Brief Builder and Style Guide Generator apps:
 
-### Design Specifications Applied
+1. **Header** - Sticky navigation with:
+   - DocBuilder logo (left-aligned)
+   - Section anchors: Tools, How It Works, Features
+   - External links: Home, My Projects (to tom-panos.com)
+
+2. **Hero Section** - Dark gradient background with:
+   - Badge pill: "AI-Powered Document Tools"
+   - Headline with accent color: "Create Professional **Documents** in Seconds"
+   - Description text
+   - "Explore Tools" CTA button
+
+3. **Tools Section** - Two enhanced tool cards with:
+   - Tool icon and title
+   - Description
+   - Launch App button + GitHub link
+   - SVG preview image showing the tool interface
+
+4. **How It Works Section** - Three numbered steps:
+   - 01: Upload or Enter URL
+   - 02: AI Analysis
+   - 03: Download Document
+   - Connected with dashed lines on desktop
+
+5. **Features Section** - Six feature cards in 3x2 grid:
+   - Asset Analysis
+   - URL Extraction
+   - AI-Powered
+   - Professional Output
+   - Instant Results
+   - Brand Consistency
+
+6. **CTA Section** - Call-to-action with:
+   - "Ready to Create Your Document?" heading
+   - Description text
+   - "Get Started Free" button
+
+7. **Footer** - Two-column layout:
+   - DocBuilder logo (left)
+   - Attribution text (right)
+
+---
+
+## Design Specifications Applied
 
 Based on `brief-builder.netlify.app-style-guide.pdf`:
 
 - **Colors:**
-  - Primary Accent: `#2383E2` (teal)
+  - Primary Accent: `#2383E2` (blue)
   - Dark Backgrounds: `#1F1F1F`, `#191919`
   - Card Background: `#FFFFFF`
   - Text Primary: `#2F2F2F`
@@ -44,109 +77,71 @@ Based on `brief-builder.netlify.app-style-guide.pdf`:
 - **Typography:**
   - Font: `system-ui` stack
   - Display: 48px (36px mobile)
-  - Proper heading hierarchy
+  - Proper heading hierarchy (h1 → h2 → h3)
 
 - **Components:**
   - Cards with 12px border radius, hover shadow effects
   - Primary buttons with 8px border radius
+  - Badge pills with 100px border radius
   - Consistent 4px-based spacing scale
 
 ### Accessibility Features
 
 - Skip-to-content link for keyboard navigation
-- Proper heading hierarchy (h1 → h2 → h3)
+- Proper heading hierarchy
 - Focus indicators on all interactive elements
-- ARIA labels on icon-only buttons
+- ARIA labels on icon-only buttons and decorative elements
 - `prefers-reduced-motion` support
-- Semantic HTML landmarks
+- Semantic HTML landmarks (header, main, footer, section)
 
 ### Responsive Design
 
 - Mobile-first CSS approach
 - Cards stack vertically on mobile (<768px)
-- Cards display side-by-side on tablet/desktop
+- Features grid: 1 column (mobile) → 2 columns (tablet) → 3 columns (desktop)
+- Steps section: vertical stack (mobile) → horizontal with connectors (desktop)
 - Typography scales appropriately across breakpoints
 
 ---
 
-## Recent Updates (December 12, 2024)
+## Recent Updates (December 13, 2024)
 
-### Logo Replacement - tt9.svg
+### Complete Landing Page Redesign
 
-- Replaced both site logos with new `tt9.svg` branding
-- Header logo: Updated from `docbuilder-logo.svg` to `tt9.svg` (32px height)
-- Hero section logo: Updated from `docbuilder-logo.svg` to `tt9.svg` (80px height)
+Redesigned the entire landing page to match the style of the Creative Brief Builder and Style Guide Generator landing pages:
 
-### Previous Logo Integration
+- Added badge pill in hero section
+- Replaced logo in hero with text headline (logo remains in header)
+- Added "How It Works" section with 3 steps
+- Added "Features" section with 6 feature cards
+- Added CTA section before footer
+- Updated footer with logo + attribution layout
 
-- Replaced placeholder SVG icon with official DocBuilder logo in header navigation
-- Updated hero section title to display DocBuilder logo instead of text
-- Logo displays at 32px height in header, 80px height in hero section
+### Tool Preview Images
+
+- Added SVG preview images for each tool card
+- Images are transparent and show the tool interface
+- Consistent sizing across both cards
 
 ### Navigation Enhancement
 
-- Added navigation menu to header with two links:
-  - **Home** → <https://tom-panos.com>
-  - **My Projects** → <https://tom-panos.com/toms-projects>
-- Navigation styled with:
-  - Right-aligned positioning
-  - Hover effect with brand color (#2383E2)
-  - Proper spacing and accessibility features
-
-### CSS Updates
-
-- Added `.header .container` flexbox layout with `justify-content: space-between`
-- Added `.nav` and `.nav-link` styles for navigation menu
-- Maintained consistent spacing using existing design tokens
-
----
-
-## Next Steps
-
-### 1. Create GitHub Repository
-```bash
-# Initialize git repo
-git init
-git add .
-git commit -m "Initial commit: DocBuilder landing page"
-
-# Create repo on GitHub named "DocBuilder"
-# Then push:
-git remote add origin https://github.com/TomsTools11/DocBuilder.git
-git branch -M main
-git push -u origin main
-```
-
-### 2. Deploy to Netlify
-
-1. Go to [netlify.com](https://netlify.com) and log in
-2. Click "Add new site" → "Import an existing project"
-3. Connect to GitHub and select the "DocBuilder" repository
-4. Deploy settings (defaults should work):
-   - Build command: (leave empty)
-   - Publish directory: `/` or `.`
-5. Click "Deploy site"
-
-### 3. Optional: Custom Domain
-
-If you want a custom domain (e.g., `docbuilder.tom-panos.com`):
-1. In Netlify, go to Site Settings → Domain Management
-2. Add your custom domain
-3. Configure DNS at your domain registrar
+- Added section anchor links (Tools, How It Works, Features)
+- Added divider between section anchors and external links
+- External links styled with reduced opacity
 
 ---
 
 ## File Structure
 
 ```
-docbuilder-landing-page/
+docbuilder/
 ├── index.html                              # Main landing page
 ├── styles.css                              # All styles
-├── tt9.svg                                 # Current site logo
-├── docbuilder-logo.svg                     # Previous logo (archived)
+├── docbuilder-logo.svg                     # Site logo
+├── brief-builder-image.svg                 # Tool preview image
+├── style-guide-generator-image.svg         # Tool preview image
 ├── high-level-landing-page-plan.md         # Original requirements
 ├── brief-builder.netlify.app-style-guide.pdf  # Design reference
-├── example-ui.png                          # Visual reference
 └── PROGRESS.md                             # This file
 ```
 
@@ -156,6 +151,7 @@ docbuilder-landing-page/
 
 | Resource | URL |
 |----------|-----|
+| DocBuilder (GitHub) | https://github.com/TomsTools11/docbuilder |
 | Creative Brief Builder (Live) | https://brief-builder.netlify.app/ |
 | Creative Brief Builder (GitHub) | https://github.com/TomsTools11/creative-brief-builder |
 | Style Guide Generator (Live) | https://styleguidegenerator-production.up.railway.app/ |
@@ -166,7 +162,8 @@ docbuilder-landing-page/
 
 ## Notes for Future Sessions
 
-- The landing page is complete and ready for deployment
+- The landing page redesign is complete and deployed
 - No build step required - pure HTML/CSS static site
 - To make changes, edit `index.html` or `styles.css` directly
 - Style guide PDF in repo for reference on any future design updates
+- Preview images are SVG format for crisp rendering at any size

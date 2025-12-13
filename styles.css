@@ -446,7 +446,6 @@ body {
 
 /* Tool Preview Images */
 .tool-preview {
-  background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-primary-alt) 100%);
   padding: var(--space-6);
   display: flex;
   justify-content: center;

@@ -447,53 +447,28 @@ body {
 /* Tool Preview Images */
 .tool-preview {
   background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-primary-alt) 100%);
-  padding: var(--space-6) var(--space-6) 0;
-  min-height: 200px;
-  position: relative;
-  overflow: hidden;
-}
-
-.tool-preview-stack {
-  position: relative;
+  padding: var(--space-6);
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 220px;
 }
 
 .tool-preview-img {
   width: 100%;
-  max-width: 320px;
-  border-radius: var(--radius-md) var(--radius-md) 0 0;
-  box-shadow: var(--shadow-lg);
+  max-width: 100%;
+  height: auto;
   transition: transform var(--transition-base);
 }
 
-.tool-preview-back {
-  position: absolute;
-  transform: translateX(-20px) translateY(20px) scale(0.95);
-  opacity: 0.6;
-}
-
-.tool-preview-front {
-  position: relative;
-  z-index: 1;
-}
-
-.tool-card:hover .tool-preview-back {
-  transform: translateX(-30px) translateY(15px) scale(0.95);
-}
-
-.tool-card:hover .tool-preview-front {
-  transform: translateY(-5px);
+.tool-card:hover .tool-preview-img {
+  transform: scale(1.02);
 }
 
 @media (max-width: 640px) {
   .tool-preview {
-    min-height: 160px;
-    padding: var(--space-4) var(--space-4) 0;
-  }
-
-  .tool-preview-img {
-    max-width: 260px;
+    min-height: 180px;
+    padding: var(--space-4);
   }
 }
 

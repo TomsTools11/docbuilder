@@ -2,10 +2,6 @@
 
 A landing page and portal for a suite of AI-powered document generation tools that help professionals create creative briefs, style guides, and product requirements documents in minutes.
 
-## Live Site
-
-🌐 **[View Live Demo](https://docbuilder.netlify.app)**
-
 ## Overview
 
 DocBuilder serves as a hub for three AI-powered document generation tools:

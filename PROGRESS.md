@@ -1,7 +1,7 @@
 # DocBuilder Landing Page - Progress Update
 
-**Last Updated:** December 16, 2024
-**Status:** Deployed and Live
+**Last Updated:** December 18, 2024
+**Status:** Deployed and Live (Railway)
 
 ---
 
@@ -17,6 +17,7 @@
 | `brief-builder-image.svg` | Tool preview image for Creative Brief Builder | Active |
 | `style-guide-generator-image.svg` | Tool preview image for Style Guide Generator | Active |
 | `PRD-screenshot.svg` | Tool preview image for PRD Builder | Active |
+| `Persona-image.svg` | Tool preview image for Persona Builder | Active |
 
 ### Landing Page Structure
 
@@ -25,15 +26,15 @@ The landing page now matches the style of the Creative Brief Builder and Style G
 1. **Header** - Sticky navigation with:
    - DocBuilder logo (left-aligned)
    - Section anchors: Tools, How It Works, Features
-   - External links: Home, My Projects (to tom-panos.com)
+   - External links: Home, More Projects (to tom-panos.com)
 
 2. **Hero Section** - Dark gradient background with:
    - Badge pill: "AI-Powered Document Tools"
-   - Headline with accent color: "Create Professional **Documents** in Seconds"
+   - Headline with accent color: "**Professional** Documents in No Time"
    - Description text
    - "Explore Tools" CTA button
 
-3. **Tools Section** - Three enhanced tool cards with:
+3. **Tools Section** - Four enhanced tool cards with:
    - Tool icon and title
    - Description
    - Launch App button + GitHub link
@@ -105,7 +106,29 @@ Based on `brief-builder.netlify.app-style-guide.pdf`:
 
 ---
 
-## Recent Updates (December 16, 2024)
+## Recent Updates (December 18, 2024)
+
+### Added Persona Builder Tool
+
+Added a fourth tool card to the landing page for Persona Builder:
+
+- **Tool Name:** Persona Builder
+- **Description:** Generate multiple user personas in just minutes with professional formatting and a polished style.
+- **Launch URL:** <https://persona-builder-production-191d.up.railway.app/>
+- **GitHub:** <https://github.com/TomsTools11/persona-builder>
+- **Preview Image:** Persona-image.svg
+
+The new card follows the exact same structure and styling as the existing tool cards.
+
+### Updated Hero Copy
+
+- Headline changed to: "**Professional** Documents in No Time"
+- Updated hero description
+- Nav link renamed from "My Projects" to "More Projects"
+
+---
+
+## Previous Updates (December 16, 2024)
 
 ### Added PRD Builder Tool
 
@@ -113,11 +136,9 @@ Added a third tool card to the landing page for PRD Builder:
 
 - **Tool Name:** PRD Builder
 - **Description:** Create detailed product requirements documents with AI assistance. Define features, user stories, and specifications effortlessly.
-- **Launch URL:** https://prd-builder.netlify.app/
-- **GitHub:** https://github.com/TomsTools11/prd-builder
+- **Launch URL:** <https://prd-builder.netlify.app/>
+- **GitHub:** <https://github.com/TomsTools11/prd-builder>
 - **Preview Image:** PRD-screenshot.svg
-
-The new card follows the exact same structure and styling as the existing Creative Brief Builder and Style Guide Generator cards.
 
 ---
 
@@ -158,6 +179,7 @@ docbuilder/
 ├── brief-builder-image.svg                 # Tool preview image
 ├── style-guide-generator-image.svg         # Tool preview image
 ├── PRD-screenshot.svg                      # Tool preview image
+├── Persona-image.svg                       # Tool preview image
 ├── high-level-landing-page-plan.md         # Original requirements
 ├── brief-builder.netlify.app-style-guide.pdf  # Design reference
 └── PROGRESS.md                             # This file
@@ -169,14 +191,16 @@ docbuilder/
 
 | Resource | URL |
 |----------|-----|
-| DocBuilder (GitHub) | https://github.com/TomsTools11/docbuilder |
-| Creative Brief Builder (Live) | https://brief-builder.netlify.app/ |
-| Creative Brief Builder (GitHub) | https://github.com/TomsTools11/creative-brief-builder |
-| Style Guide Generator (Live) | https://styleguidegenerator-production.up.railway.app/ |
-| Style Guide Generator (GitHub) | https://github.com/TomsTools11/styleguidegenerator |
-| PRD Builder (Live) | https://prd-builder.netlify.app/ |
-| PRD Builder (GitHub) | https://github.com/TomsTools11/prd-builder |
-| Tom's Website | https://tom-panos.com |
+| DocBuilder (GitHub) | <https://github.com/TomsTools11/docbuilder> |
+| Creative Brief Builder (Live) | <https://brief-builder.netlify.app/> |
+| Creative Brief Builder (GitHub) | <https://github.com/TomsTools11/creative-brief-builder> |
+| Style Guide Generator (Live) | <https://styleguidegenerator-production.up.railway.app/> |
+| Style Guide Generator (GitHub) | <https://github.com/TomsTools11/styleguidegenerator> |
+| PRD Builder (Live) | <https://prd-builder.netlify.app/> |
+| PRD Builder (GitHub) | <https://github.com/TomsTools11/prd-builder> |
+| Persona Builder (Live) | <https://persona-builder-production-191d.up.railway.app/> |
+| Persona Builder (GitHub) | <https://github.com/TomsTools11/persona-builder> |
+| Tom's Website | <https://tom-panos.com> |
 
 ---
 

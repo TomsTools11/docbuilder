@@ -1,7 +1,7 @@
 # DocBuilder Landing Page - Progress Update
 
-**Last Updated:** December 18, 2024
-**Status:** Deployed and Live (Railway)
+**Last Updated:** December 31, 2024
+**Status:** Deployed and Live (Netlify)
 
 ---
 
@@ -11,8 +11,9 @@
 
 | File | Description | Status |
 |------|-------------|--------|
-| `index.html` | Main landing page with full redesign | Complete |
+| `index.html` | Main landing page with full redesign + auth | Complete |
 | `styles.css` | All styling following Brief Builder style guide | Complete |
+| `netlify.toml` | Netlify Identity configuration | Complete |
 | `docbuilder-logo.svg` | DocBuilder logo (used in header and footer) | Active |
 | `brief-builder-image.svg` | Tool preview image for Creative Brief Builder | Active |
 | `style-guide-generator-image.svg` | Tool preview image for Style Guide Generator | Active |
@@ -27,6 +28,7 @@ The landing page now matches the style of the Creative Brief Builder and Style G
    - DocBuilder logo (left-aligned)
    - Section anchors: Tools, How It Works, Features
    - External links: Home, More Projects (to tom-panos.com)
+   - Auth buttons: Log In / Sign Up (Netlify Identity)
 
 2. **Hero Section** - Dark gradient background with:
    - Badge pill: "AI-Powered Document Tools"
@@ -106,7 +108,41 @@ Based on `brief-builder.netlify.app-style-guide.pdf`:
 
 ---
 
-## Recent Updates (December 18, 2024)
+## Recent Updates (December 31, 2024)
+
+### Added User Authentication with Netlify Identity
+
+Implemented simple user login functionality using Netlify Identity:
+
+**Files Created:**
+- `netlify.toml` - Netlify Identity configuration with open registration
+
+**Files Modified:**
+- `index.html` - Added auth buttons to header + Identity widget script
+- `styles.css` - Added auth button styles (~85 lines)
+
+**Features:**
+- Log In / Sign Up buttons in header navigation
+- Netlify Identity widget for authentication modal
+- User email display when logged in
+- Log Out button for authenticated users
+- Responsive design for mobile devices
+- Styles match existing design system (uses CSS custom properties)
+
+**Technical Details:**
+- Zero backend code required
+- Minimal JavaScript (~25 lines) for auth state management
+- Uses Netlify Identity Widget CDN
+- Free tier supports up to 1,000 active users
+
+**Post-Deployment Setup:**
+1. Enable Netlify Identity in dashboard (Site Settings > Identity)
+2. Configure registration preferences (open/invite-only)
+3. Optionally enable external providers (Google, GitHub)
+
+---
+
+## Previous Updates (December 18, 2024)
 
 ### Added Persona Builder Tool
 
@@ -175,6 +211,7 @@ Redesigned the entire landing page to match the style of the Creative Brief Buil
 docbuilder/
 ├── index.html                              # Main landing page
 ├── styles.css                              # All styles
+├── netlify.toml                            # Netlify Identity config
 ├── docbuilder-logo.svg                     # Site logo
 ├── brief-builder-image.svg                 # Tool preview image
 ├── style-guide-generator-image.svg         # Tool preview image
@@ -207,7 +244,9 @@ docbuilder/
 ## Notes for Future Sessions
 
 - The landing page redesign is complete and deployed
-- No build step required - pure HTML/CSS static site
+- No build step required - pure HTML/CSS static site (with minimal JS for auth)
 - To make changes, edit `index.html` or `styles.css` directly
 - Style guide PDF in repo for reference on any future design updates
 - Preview images are SVG format for crisp rendering at any size
+- User authentication is handled via Netlify Identity (managed in Netlify dashboard)
+- Auth configuration is in `netlify.toml` - set `registration = "invite"` to disable open signups

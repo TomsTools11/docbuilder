@@ -837,83 +837,257 @@ body {
 .header__auth {
   display: flex;
   align-items: center;
-  margin-left: var(--space-6);
+  margin-left: var(--space-4);
+  padding-left: var(--space-4);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .auth-buttons {
   display: flex;
-  gap: var(--space-2);
+  align-items: center;
+  gap: var(--space-4);
 }
 
 .auth-user {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-4);
 }
 
 .user-email {
-  color: var(--color-text-secondary);
-  font-size: var(--text-small);
-}
-
-/* Auth Button Base */
-.btn-auth {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-family);
-  font-size: var(--text-small);
-  font-weight: var(--font-bold);
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
   color: var(--color-text-inverse);
-  min-height: 36px;
+  font-size: var(--text-body);
+  opacity: 0.9;
 }
 
-.btn-auth:hover {
-  border-color: var(--color-primary-accent);
+/* Log In - styled like nav link */
+.btn-auth-link {
+  background: transparent;
+  border: none;
+  color: var(--color-text-inverse);
+  font-family: var(--font-family);
+  font-size: var(--text-body);
+  font-weight: var(--font-regular);
+  cursor: pointer;
+  padding: 0;
+  transition: color var(--transition-fast);
+}
+
+.btn-auth-link:hover {
   color: var(--color-primary-accent);
 }
 
-.btn-auth:active {
+.btn-auth-link:focus-visible {
+  outline: 2px solid var(--color-text-inverse);
+  outline-offset: 2px;
+}
+
+/* Sign Up - subtle primary button */
+.btn-auth-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary-accent);
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--color-text-inverse);
+  font-family: var(--font-family);
+  font-size: var(--text-body);
+  font-weight: var(--font-bold);
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.btn-auth-primary:hover {
+  background-color: var(--color-primary-accent-hover);
+}
+
+.btn-auth-primary:active {
   transform: scale(0.98);
 }
 
-.btn-auth:focus-visible {
+.btn-auth-primary:focus-visible {
   box-shadow: 0 0 0 3px rgba(35, 131, 226, 0.3);
+  outline: none;
 }
 
-/* Primary Auth Button (Sign Up) */
-.btn-auth--primary {
-  background-color: var(--color-primary-accent);
-  border-color: var(--color-primary-accent);
+/* My Account link - styled like nav link */
+.user-account-link {
   color: var(--color-text-inverse);
+  font-size: var(--text-body);
+  text-decoration: none;
+  transition: color var(--transition-fast);
 }
 
-.btn-auth--primary:hover {
-  background-color: var(--color-primary-accent-hover);
-  border-color: var(--color-primary-accent-hover);
-  color: var(--color-text-inverse);
+.user-account-link:hover {
+  color: var(--color-primary-accent);
 }
 
 /* Mobile responsive auth */
 @media (max-width: 768px) {
   .header__auth {
-    margin-left: var(--space-4);
+    margin-left: var(--space-3);
+    padding-left: var(--space-3);
   }
 
-  .btn-auth {
+  .auth-buttons,
+  .auth-user {
+    gap: var(--space-3);
+  }
+
+  .btn-auth-link,
+  .btn-auth-primary,
+  .user-email,
+  .user-account-link {
+    font-size: var(--text-small);
+  }
+
+  .btn-auth-primary {
     padding: var(--space-2) var(--space-3);
-    font-size: 0.6875rem;
   }
 }
 
 @media (max-width: 640px) {
-  .auth-buttons {
+  .header__auth {
+    margin-left: var(--space-2);
+    padding-left: var(--space-2);
+  }
+
+  .auth-buttons,
+  .auth-user {
+    gap: var(--space-2);
+  }
+}
+
+/* ==========================================================================
+   Account Page Styles
+   ========================================================================== */
+
+.account-page {
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+}
+
+.account-hero {
+  background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-primary-alt) 100%);
+  padding: var(--space-12) 0;
+  text-align: center;
+}
+
+.account-hero-title {
+  font-size: var(--text-h1);
+  font-weight: var(--font-bold);
+  color: var(--color-text-inverse);
+  margin-bottom: var(--space-2);
+}
+
+.account-hero-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.account-content {
+  flex: 1;
+  padding: var(--space-10) 0;
+}
+
+.account-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  max-width: 480px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.account-card-title {
+  font-size: var(--text-h2);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.account-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.account-info-row:last-child {
+  border-bottom: none;
+}
+
+.account-info-label {
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-regular);
+}
+
+.account-info-value {
+  font-size: var(--text-body);
+  color: var(--color-text-primary);
+  font-weight: var(--font-bold);
+}
+
+.account-actions {
+  margin-top: var(--space-8);
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+}
+
+.btn-logout {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  font-family: var(--font-family);
+  font-size: var(--text-body);
+  font-weight: var(--font-bold);
+  padding: var(--space-3) var(--space-5);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-logout:hover {
+  border-color: var(--color-error);
+  color: var(--color-error);
+}
+
+.btn-logout:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 95, 86, 0.3);
+  outline: none;
+}
+
+.account-not-logged-in {
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.account-not-logged-in p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+@media (max-width: 640px) {
+  .account-card {
+    margin: 0 var(--space-4);
+    padding: var(--space-6);
+  }
+
+  .account-info-row {
+    flex-direction: column;
+    align-items: flex-start;
     gap: var(--space-1);
   }
 }

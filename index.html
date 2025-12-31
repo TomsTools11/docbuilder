@@ -38,12 +38,12 @@
       <!-- Auth Section -->
       <div class="header__auth">
         <div id="auth-login" class="auth-buttons">
-          <button onclick="netlifyIdentity.open('login')" class="btn btn-auth">Log In</button>
-          <button onclick="netlifyIdentity.open('signup')" class="btn btn-auth btn-auth--primary">Sign Up</button>
+          <button onclick="netlifyIdentity.open('login')" class="btn-auth-link">Log In</button>
+          <button onclick="netlifyIdentity.open('signup')" class="btn-auth-primary">Sign Up</button>
         </div>
         <div id="auth-user" class="auth-user" style="display: none;">
-          <span id="user-email" class="user-email"></span>
-          <button onclick="netlifyIdentity.logout()" class="btn btn-auth">Log Out</button>
+          <a href="account.html" class="user-account-link">My Account</a>
+          <button onclick="netlifyIdentity.logout()" class="btn-auth-link">Log Out</button>
         </div>
       </div>
     </div>
@@ -364,12 +364,12 @@
   <script>
     netlifyIdentity.on('init', function(user) {
       if (user) {
-        updateUIForLoggedInUser(user);
+        updateUIForLoggedInUser();
       }
     });
 
     netlifyIdentity.on('login', function(user) {
-      updateUIForLoggedInUser(user);
+      updateUIForLoggedInUser();
       netlifyIdentity.close();
     });
 
@@ -377,10 +377,9 @@
       updateUIForLoggedOutUser();
     });
 
-    function updateUIForLoggedInUser(user) {
+    function updateUIForLoggedInUser() {
       document.getElementById('auth-login').style.display = 'none';
       document.getElementById('auth-user').style.display = 'flex';
-      document.getElementById('user-email').textContent = user.email;
     }
 
     function updateUIForLoggedOutUser() {

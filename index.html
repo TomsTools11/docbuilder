@@ -64,7 +64,7 @@
     <div id="public-content" class="public-content is-visible">
 
       <!-- Public Hero Section -->
-      <section class="public-hero" aria-labelledby="public-hero-heading">
+      <section class="hero" aria-labelledby="public-hero-heading">
         <div class="container">
           <span class="badge">AI-Powered Document Tools</span>
           <h1 id="public-hero-heading" class="hero-title">
@@ -72,14 +72,14 @@
           </h1>
           <p class="hero-description">Stop wasting time on formatting. Our AI-powered tools generate beautiful creative briefs, style guides, PRDs, and user personas instantly.</p>
           <div class="hero-actions">
-            <button onclick="netlifyIdentity.open('signup')" class="btn-hero-primary">
+            <button onclick="netlifyIdentity.open('signup')" class="btn btn-primary btn-large">
               Get Started Now
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"/>
                 <polyline points="12 5 19 12 12 19"/>
               </svg>
             </button>
-            <button onclick="netlifyIdentity.open('login')" class="btn-hero-secondary">
+            <button onclick="netlifyIdentity.open('login')" class="btn btn-secondary btn-large">
               I Already Have Access
             </button>
           </div>
@@ -166,19 +166,17 @@
       </section>
 
       <!-- Public CTA Section -->
-      <section class="public-cta" aria-labelledby="public-cta-heading">
+      <section class="cta-section" aria-labelledby="public-cta-heading">
         <div class="container">
           <h2 id="public-cta-heading" class="cta-title">Ready to Save Hours Every Week?</h2>
           <p class="cta-description">Join professionals who use DocBuilder to create documents faster and focus on what matters.</p>
-          <div class="cta-actions">
-            <button onclick="netlifyIdentity.open('signup')" class="btn-hero-primary">
-              Get Started Now
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </button>
-          </div>
+          <button onclick="netlifyIdentity.open('signup')" class="btn btn-primary btn-large cta-button">
+            Get Started Now
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
         </div>
       </section>
 

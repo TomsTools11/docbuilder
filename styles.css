@@ -519,6 +519,27 @@ body {
   box-shadow: 0 0 0 3px rgba(35, 131, 226, 0.3);
 }
 
+/* Secondary Button (outline style for dark backgrounds) */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-text-inverse);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: var(--space-3) var(--space-5);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-text-inverse);
+}
+
+.btn-secondary:active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.btn-secondary:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
 .btn-icon {
   flex-shrink: 0;
 }
@@ -1146,115 +1167,6 @@ body {
 }
 
 /* ==========================================================================
-   Public Landing Page - Value Proposition
-   ========================================================================== */
-
-.public-hero {
-  background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-primary-alt) 100%);
-  padding: var(--space-16) 0 calc(var(--space-16) + var(--space-8));
-  text-align: center;
-}
-
-.public-hero .hero-title {
-  font-size: var(--text-display);
-  font-weight: var(--font-bold);
-  line-height: var(--leading-tight);
-  letter-spacing: var(--tracking-tight);
-  color: var(--color-text-inverse);
-  margin-bottom: var(--space-6);
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.public-hero .hero-description {
-  font-size: 1.25rem;
-  line-height: var(--leading-normal);
-  color: var(--color-text-secondary);
-  max-width: 640px;
-  margin: 0 auto var(--space-8);
-}
-
-.public-hero .hero-actions {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-4);
-  flex-wrap: wrap;
-}
-
-.public-hero .btn-hero-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  background-color: var(--color-primary-accent);
-  color: var(--color-text-inverse);
-  font-family: var(--font-family);
-  font-size: 1rem;
-  font-weight: var(--font-bold);
-  padding: var(--space-4) var(--space-8);
-  border: none;
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  min-height: 52px;
-  transition: all var(--transition-fast);
-}
-
-.public-hero .btn-hero-primary:hover {
-  background-color: var(--color-primary-accent-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(35, 131, 226, 0.3);
-}
-
-.public-hero .btn-hero-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  background-color: transparent;
-  color: var(--color-text-inverse);
-  font-family: var(--font-family);
-  font-size: 1rem;
-  font-weight: var(--font-bold);
-  padding: var(--space-4) var(--space-8);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  min-height: 52px;
-  transition: all var(--transition-fast);
-}
-
-.public-hero .btn-hero-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: var(--color-text-inverse);
-}
-
-@media (max-width: 640px) {
-  .public-hero {
-    padding: var(--space-12) 0;
-  }
-
-  .public-hero .hero-title {
-    font-size: var(--text-h1);
-  }
-
-  .public-hero .hero-description {
-    font-size: 1rem;
-  }
-
-  .public-hero .hero-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .public-hero .btn-hero-primary,
-  .public-hero .btn-hero-secondary {
-    width: 100%;
-    max-width: 280px;
-  }
-}
-
-/* ==========================================================================
    Public Features Section
    ========================================================================== */
 
@@ -1509,37 +1421,6 @@ body {
   .trust-stat-value {
     font-size: var(--text-h2);
   }
-}
-
-/* ==========================================================================
-   Public CTA Section
-   ========================================================================== */
-
-.public-cta {
-  background-color: var(--color-bg-primary-alt);
-  padding: var(--space-16) 0;
-  text-align: center;
-}
-
-.public-cta .cta-title {
-  font-size: var(--text-h1);
-  font-weight: var(--font-bold);
-  color: var(--color-text-inverse);
-  margin-bottom: var(--space-4);
-}
-
-.public-cta .cta-description {
-  font-size: 1rem;
-  color: var(--color-text-secondary);
-  max-width: 480px;
-  margin: 0 auto var(--space-8);
-}
-
-.public-cta .cta-actions {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-4);
-  flex-wrap: wrap;
 }
 
 /* ==========================================================================

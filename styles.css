@@ -829,3 +829,91 @@ body {
     print-color-adjust: exact;
   }
 }
+
+/* ==========================================================================
+   Auth Buttons (Netlify Identity)
+   ========================================================================== */
+
+.header__auth {
+  display: flex;
+  align-items: center;
+  margin-left: var(--space-6);
+}
+
+.auth-buttons {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.auth-user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.user-email {
+  color: var(--color-text-secondary);
+  font-size: var(--text-small);
+}
+
+/* Auth Button Base */
+.btn-auth {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-size: var(--text-small);
+  font-weight: var(--font-bold);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: var(--color-text-inverse);
+  min-height: 36px;
+}
+
+.btn-auth:hover {
+  border-color: var(--color-primary-accent);
+  color: var(--color-primary-accent);
+}
+
+.btn-auth:active {
+  transform: scale(0.98);
+}
+
+.btn-auth:focus-visible {
+  box-shadow: 0 0 0 3px rgba(35, 131, 226, 0.3);
+}
+
+/* Primary Auth Button (Sign Up) */
+.btn-auth--primary {
+  background-color: var(--color-primary-accent);
+  border-color: var(--color-primary-accent);
+  color: var(--color-text-inverse);
+}
+
+.btn-auth--primary:hover {
+  background-color: var(--color-primary-accent-hover);
+  border-color: var(--color-primary-accent-hover);
+  color: var(--color-text-inverse);
+}
+
+/* Mobile responsive auth */
+@media (max-width: 768px) {
+  .header__auth {
+    margin-left: var(--space-4);
+  }
+
+  .btn-auth {
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.6875rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .auth-buttons {
+    gap: var(--space-1);
+  }
+}

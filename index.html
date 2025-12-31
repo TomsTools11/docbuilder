@@ -34,6 +34,18 @@
         <a href="https://tom-panos.com" class="nav-link nav-link-external">Home</a>
         <a href="https://tom-panos.com/toms-projects" class="nav-link nav-link-external">More Projects</a>
       </nav>
+
+      <!-- Auth Section -->
+      <div class="header__auth">
+        <div id="auth-login" class="auth-buttons">
+          <button onclick="netlifyIdentity.open('login')" class="btn btn-auth">Log In</button>
+          <button onclick="netlifyIdentity.open('signup')" class="btn btn-auth btn-auth--primary">Sign Up</button>
+        </div>
+        <div id="auth-user" class="auth-user" style="display: none;">
+          <span id="user-email" class="user-email"></span>
+          <button onclick="netlifyIdentity.logout()" class="btn btn-auth">Log Out</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -346,5 +358,35 @@
       <p class="footer-text">Made with <span aria-label="love">❤️</span> by <a href="https://tom-panos.com" target="_blank" rel="noopener noreferrer">Tom</a> in Milwaukee, WI</p>
     </div>
   </footer>
+
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    netlifyIdentity.on('init', function(user) {
+      if (user) {
+        updateUIForLoggedInUser(user);
+      }
+    });
+
+    netlifyIdentity.on('login', function(user) {
+      updateUIForLoggedInUser(user);
+      netlifyIdentity.close();
+    });
+
+    netlifyIdentity.on('logout', function() {
+      updateUIForLoggedOutUser();
+    });
+
+    function updateUIForLoggedInUser(user) {
+      document.getElementById('auth-login').style.display = 'none';
+      document.getElementById('auth-user').style.display = 'flex';
+      document.getElementById('user-email').textContent = user.email;
+    }
+
+    function updateUIForLoggedOutUser() {
+      document.getElementById('auth-login').style.display = 'flex';
+      document.getElementById('auth-user').style.display = 'none';
+    }
+  </script>
 </body>
 </html>

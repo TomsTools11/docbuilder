@@ -110,6 +110,36 @@ Based on `brief-builder.netlify.app-style-guide.pdf`:
 
 ## Recent Updates (December 31, 2024)
 
+### Gated Landing Page
+
+Restructured the entire landing page to gate all tool content behind authentication, with a public marketing page for prospective customers.
+
+**Public Content (Non-members see):**
+- Hero section with value proposition and signup CTAs
+- Feature teasers (6 cards) highlighting what's included
+- CTA section encouraging signup
+- Navigation shows: Features
+
+**Member Content (Logged-in users see):**
+- Welcome banner confirming access
+- Full tools section with all 4 tool cards and launch buttons
+- How It Works section
+- Detailed features section
+- Navigation shows: Tools, How It Works, Features
+
+**Files Modified:**
+- `index.html` - Complete restructure with public/member content blocks (~610 lines)
+- `styles.css` - Added ~430 lines for gated content styling (public hero, features, pricing, etc.)
+- `account.html` - Updated navigation to match member view
+
+**Technical Implementation:**
+- CSS visibility classes (`.is-visible`) toggle content display
+- JavaScript handles auth state changes via Netlify Identity events
+- Navigation dynamically switches between public/member links
+- All public CTAs trigger Netlify Identity signup modal
+
+---
+
 ### Added User Authentication with Netlify Identity
 
 Implemented simple user login functionality using Netlify Identity:
@@ -209,7 +239,8 @@ Redesigned the entire landing page to match the style of the Creative Brief Buil
 
 ```
 docbuilder/
-├── index.html                              # Main landing page
+├── index.html                              # Main landing page (public + member content)
+├── account.html                            # User account page (members only)
 ├── styles.css                              # All styles
 ├── netlify.toml                            # Netlify Identity config
 ├── docbuilder-logo.svg                     # Site logo
@@ -243,7 +274,8 @@ docbuilder/
 
 ## Notes for Future Sessions
 
-- The landing page redesign is complete and deployed
+- The landing page uses a gated content model - public visitors see marketing, members see tools
+- Content visibility is controlled by CSS classes (`.is-visible`) toggled via JavaScript
 - No build step required - pure HTML/CSS static site (with minimal JS for auth)
 - To make changes, edit `index.html` or `styles.css` directly
 - Style guide PDF in repo for reference on any future design updates

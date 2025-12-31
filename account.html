@@ -33,12 +33,12 @@
       <!-- Auth Section -->
       <div class="header__auth">
         <div id="auth-login" class="auth-buttons">
-          <button onclick="netlifyIdentity.open('login')" class="btn-auth-link">Log In</button>
+          <button onclick="netlifyIdentity.open('login')" class="btn-auth-secondary">Log In</button>
           <button onclick="netlifyIdentity.open('signup')" class="btn-auth-primary">Sign Up</button>
         </div>
         <div id="auth-user" class="auth-user" style="display: none;">
-          <a href="account.html" class="user-account-link">My Account</a>
-          <button onclick="netlifyIdentity.logout()" class="btn-auth-link">Log Out</button>
+          <a href="account.html" class="btn-auth-account">My Account</a>
+          <button onclick="netlifyIdentity.logout()" class="btn-auth-secondary">Log Out</button>
         </div>
       </div>
     </div>

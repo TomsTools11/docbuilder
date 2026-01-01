@@ -315,7 +315,15 @@ body {
 .hero-actions {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: var(--space-4);
+}
+
+.hero-divider {
+  color: var(--color-text-secondary);
+  font-size: 1.5rem;
+  font-weight: var(--font-regular);
+  opacity: 0.5;
 }
 
 .btn-large {
